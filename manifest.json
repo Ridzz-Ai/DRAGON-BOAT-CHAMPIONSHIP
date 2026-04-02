@@ -16,8 +16,8 @@
   ],
   "start_url": "/index.html",
   "background_color": "#001a2c",
-  "display": "standalone",
+  "display": "fullscreen",
   "scope": "/",
   "theme_color": "#00fbff",
-  "orientation": "landscape"
+  "orientation": "any"
 }
