@@ -1,4 +1,24 @@
 /* =========================================
+      SCREEN SETTINGS
+   ========================================= */
+
+:root {
+    /* Menghapus padding otomatis dari notch atau lubang kamera HP */
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* Mencegah scroll yang tidak sengaja yang bisa munculin bar atas lagi */
+    touch-action: none; 
+    overflow: hidden;
+}
+
+/* =========================================
    1. LOADING GAME SECTION
    ========================================= */
 
@@ -78,4 +98,8 @@
     font-size: 11px;
     text-transform: uppercase;
     text-shadow: 1px 1px 2px #000;
+}
+
+.game-logo {
+    display: none; /* Menembunyikan tulisan tapi kodenya tetap ada di HTML */
 }
