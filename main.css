@@ -34,16 +34,25 @@ body {
 .loading-page {
     margin: 0;
     padding: 0;
-    /* Ganti background-size jadi 100% 100% agar dipaksa pas ke layar */
+    /* GANTI background-size menjadi 'cover' agar naga tidak gepeng */
     background: url('assets/loading-bg.webp') no-repeat center center;
-    background-size: 100% 100%; 
+    background-size: cover; 
+    
+    /* Gunakan dvh (Dynamic Viewport Height) agar pas di semua HP Android/iOS */
+    width: 100vw;
     height: 100vh;
-    height: 100dvh; /* Ini kunci buat HP modern */
+    height: 100dvh; 
+    
     display: flex;
     justify-content: center;
     align-items: flex-end; 
     overflow: hidden;
     font-family: 'Arial Black', sans-serif;
+    
+    /* Menambah padding area aman agar loading bar tidak terlalu mepet lengkungan layar */
+    box-sizing: border-box;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 
 .loading-container {
